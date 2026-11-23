@@ -1,0 +1,494 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --fontsize: 16px;
+    --font1: "Space Mono", monospace;
+    --font2: "Orbitron", sans-serif;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Edge, Safari */
+}
+
+html,
+body {
+    font-family: var(--font1);
+    font-size: var(--fontsize);
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+#cabecalho {
+    background-color: #000000;
+    border-bottom: 1px solid rgba(0, 180, 255, 0.3);
+    /* preto semitransparente */
+    backdrop-filter: blur(10px);
+    /* mesmo efeito vidro do card */
+    position: relative;
+    z-index: 10;
+}
+
+.slogan {
+    position: absolute;
+    /* solta o slogan do fluxo normal */
+    top: 6%;
+    /* distância do topo do banner */
+    left: 50%;
+    /* começa no meio da largura */
+    transform: translateX(-50%);
+    /* puxa de volta metade do próprio tamanho */
+    width: 100%;
+    text-align: center;
+
+    font-size: 3rem;
+    color: #FFFFFF;
+    /* letra branca no centro */
+    text-transform: uppercase;
+    /* tudo em maiúsculas */
+    letter-spacing: 3px;
+    /* espaço entre as letras */
+    text-shadow:
+        0 0 5px #FFFFFF,
+        /* brilho branco bem próximo */
+        0 0 10px #4D7CFF,
+        /* azul suave */
+        0 0 20px #2B5CFF,
+        /* azul mais espalhado */
+        0 0 40px #2B5CFF;
+
+}
+
+.escudo {
+    position: absolute;
+    top: -80px;
+    /* distância do topo do banner (logo abaixo do menu) */
+    right: -30px;
+    /* distância da borda direita */
+    width: 300px;
+    height: auto;
+    z-index: 20;
+}
+
+a {
+    color: #00B4FF;
+    text-decoration: none;
+}
+
+/* ---Área do header--- */
+.navbar {
+    padding: 0;
+}
+
+.navbar-brand img {
+    width: 250px;
+    height: auto;
+}
+
+.navbar .container-fluid {
+    padding-left: 0;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav {
+    position: relative;
+    right: 80px;
+}
+
+.navbar .nav-link {
+    font-family: var(--font2);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow:
+        0 0 5px #FFFFFF,
+        0 0 10px #4D7CFF,
+        0 0 40px #2B5CFF;
+    padding-right: 50px;
+    transition: text-shadow 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #FFFFFF;
+    text-shadow:
+        0 0 5px #FFFFFF,
+        0 0 15px #4D7CFF,
+        0 0 30px #2B5CFF,
+        0 0 50px #2B5CFF;
+}
+
+
+/* id → # */
+#banner {
+    background-image: url("../img/fundo.jpg");
+    background-size: cover;
+    /* a imagem cobre toda a área */
+    background-position: center;
+    /* centraliza a imagem */
+    min-height: 85vh;
+    /* ocupa a altura inteira da tela */
+    display: flex;
+    /* ativa o alinhamento flexível */
+    align-items: center;
+    /* centraliza na vertical */
+    padding: 20px;
+    position: relative;
+    background-position: right center;
+}
+
+/* classes → . */
+.conteudo {
+    max-width: 600px;
+    /* limita a largura da caixa */
+    margin-left: 1%;
+    margin-top: 150px;
+}
+
+.vidro {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 180, 255, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+
+}
+
+.titulo {
+    font-family: var(--font2);
+    font-size: 2rem;
+    color: #FFFFFF;
+    /* letra branca no centro */
+    text-transform: uppercase;
+    /* tudo em maiúsculas */
+    letter-spacing: 3px;
+    /* espaço entre as letras */
+    text-shadow:
+        0 0 5px #FFFFFF,
+        /* brilho branco bem próximo */
+        0 0 10px #4D7CFF,
+        /* azul suave */
+        0 0 20px #2B5CFF,
+        /* azul mais espalhado */
+        0 0 40px #2B5CFF;
+}
+
+.texto {
+    font-family: var(--font1);
+    /* troque pela fonte escolhida */
+    font-size: 1.1rem;
+    color: #E0E0E0;
+    /* cinza claro, melhor para ler */
+    line-height: 1.6;
+}
+
+/* ---Área dos Produtos--- */
+#produtos {
+    text-align: center;
+    background-color: #0D0D0D;
+    padding: 60px 20px;
+}
+
+#produtos .card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 3px solid rgba(0, 180, 255, 0.3);
+    color: #E0E0E0;
+}
+
+#carrosselModelos {
+    padding: 0 60px;
+}
+
+#carrosselModelos .carousel-control-prev,
+#carrosselModelos .carousel-control-next {
+    width: 50px;
+    opacity: 1;
+}
+
+#carrosselModelos .carousel-control-prev-icon,
+#carrosselModelos .carousel-control-next-icon {
+    filter: drop-shadow(0 0 8px #00B4FF);
+}
+
+/* ---Área do footer--- */
+
+
+
+#rodape {
+    background-color: #0D0D0D;
+    color: #B0B0B0;
+    border-top: 1px solid rgba(0, 180, 255, 0.3);
+    padding: 40px 20px 20px;
+}
+
+#rodape p {
+    margin-bottom: 4px;
+    /* aproxima as linhas de texto */
+}
+
+#rodape h4,
+.nome-rodape {
+    font-family: var(--font2);
+    color: #00B4FF;
+    font-size: 1rem;
+}
+
+.logo-rodape {
+    width: 50px;
+}
+
+/* listas sem bolinhas e sem recuo */
+.links-rodape,
+.redes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-rodape a {
+    color: #B0B0B0;
+}
+
+.links-rodape a:hover {
+    color: #00B4FF;
+}
+
+/* ícones lado a lado */
+.redes li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.redes img {
+    width: 28px;
+}
+
+#direitos {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 180, 255, 0.15);
+    font-size: 0.85rem;
+}
+
+/* ---Área do modal--- */
+
+/* caixa do modal: fundo escuro e borda azul */
+.modal-content {
+    background-color: #0D0D0D;
+    color: #E0E0E0;
+    border: 1px solid rgba(0, 180, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0, 180, 255, 0.2);
+}
+
+.modal-title {
+    font-family: var(--font2);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 5px #FFFFFF,
+        0 0 10px #4D7CFF,
+        0 0 20px #2B5CFF;
+}
+
+#modalImagem {
+    border-radius: 12px;
+}
+
+.modal-body strong {
+    color: #00B4FF;
+}
+
+#modalSelo {
+    display: inline-block;
+    font-family: var(--font2);
+    color: #00B4FF;
+    border: 1px solid #00B4FF;
+    border-radius: 20px;
+    padding: 4px 14px;
+    box-shadow: 0 0 10px rgba(0, 180, 255, 0.4);
+}
+
+#modalSelo:empty {
+    display: none;
+}
+
+.btn-volt {
+    display: inline-block;
+    font-family: var(--font2);
+    color: #00B4FF;
+    border: 1px solid #00B4FF;
+    border-radius: 20px;
+    padding: 4px 14px;
+    box-shadow: 0 0 10px rgba(0, 180, 255, 0.4);
+}
+
+.btn-volt:hover {
+    background-color: #00B4FF;
+    color: #0D0D0D;
+    box-shadow: 0 0 15px #00B4FF;
+}
+
+/* ---Área Sobre nós--- */
+
+#sobre .list-group-item {
+    background-color: transparent;
+    color: #E0E0E0;
+    border-color: rgba(0, 180, 255, 0.3);
+
+}
+
+#sobre {
+    background-color: #0A1F44;
+    /* azul escuro da paleta, diferencia das outras seções */
+    color: #E0E0E0;
+    padding: 60px 20px;
+}
+
+#sobre h3 {
+    font-family: var(--font2);
+    color: #00B4FF;
+}
+
+/* ---Área Contato--- */
+#contato {
+    background-color: #0D0D0D;
+    color: #E0E0E0;
+    padding: 60px 20px;
+}
+
+#sobre h2,
+#produtos h2,
+#contato h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#contato h3 {
+    font-family: var(--font2);
+    color: #00B4FF;
+}
+
+#contato .form-control,
+#contato .form-select {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #FFFFFF;
+    border: 1px solid rgba(0, 180, 255, 0.3);
+}
+
+/* campo em foco: brilho azul */
+#contato .form-control:focus,
+#contato .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    border-color: #00B4FF;
+    box-shadow: 0 0 10px rgba(0, 180, 255, 0.5);
+}
+
+/* opções da lista com fundo escuro */
+#contato .form-select option {
+    background-color: #0D0D0D;
+}
+
+.erro {
+    color: #FF4D4D;
+}
+
+.sucesso {
+    color: #00B4FF;
+}
+
+@media (max-width: 991px) {
+
+    /* menu: remove o deslocamento e o espaço lateral dos links */
+    .navbar-nav {
+        right: 0;
+        text-align: center;
+    }
+
+    .navbar .nav-link {
+        padding-right: 0;
+    }
+
+    /* logo do menu menor */
+    .navbar-brand img {
+        width: 180px;
+    }
+
+    /* escudo do banner menor */
+    .escudo {
+        width: 150px;
+        top: -40px;
+        right: -10px;
+    }
+
+    /* slogan menor */
+    .slogan {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .navbar-brand img {
+        width: 140px;
+    }
+
+    /* escudo: esconde no celular para não cobrir o slogan */
+    .escudo {
+        display: none;
+    }
+
+    /* slogan: sai da posição absoluta e entra no fluxo normal */
+    .slogan {
+        position: static;
+        transform: none;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    /* banner: conteúdo empilhado, sem margem grande no topo */
+    #banner {
+        flex-direction: column;
+        justify-content: center;
+        min-height: auto;
+        padding: 40px 15px;
+    }
+
+    .conteudo {
+        margin: 0;
+    }
+
+    .titulo {
+        font-size: 1.4rem;
+    }
+
+    /* seções com menos espaço interno */
+    #sobre,
+    #produtos,
+    #contato {
+        padding: 40px 15px;
+    }
+
+    /* carrossel: setas mais próximas */
+    #carrosselModelos {
+        padding: 0 30px;
+    }
+
+    /* rodapé centralizado */
+    #rodape {
+        text-align: center;
+    }
+
+    #rodape .d-flex {
+        justify-content: center;
+    }
+}
